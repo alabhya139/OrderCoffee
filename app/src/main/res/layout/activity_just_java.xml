@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <EditText android:id="@+id/edit_text_view"
+            android:inputType="text"
+            android:hint="@string/input_name"
+            android:layout_margin="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/toppings"
+            android:textColor="@color/Pink1"
+            android:textSize="20sp"
+            android:layout_margin="8dp"
+            android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <CheckBox android:id="@+id/whipped_cream"
+            android:paddingLeft="16sp"
+            android:textStyle="bold"
+            android:text="@string/whipped_cream"
+            android:layout_margin="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onCheck"/>
+
+        <CheckBox
+            android:id="@+id/chocolate"
+            android:paddingLeft="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/chocolate"
+            android:textStyle="bold"
+            android:onClick="onChecked2"/>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/quantity"
+        android:textSize="20sp"
+        android:layout_margin="8dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark">
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp">
+
+        <Button
+            android:layout_marginLeft="8dp"
+            android:text="-"
+            android:textSize="20sp"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:onClick="decrement"/>
+
+        <TextView android:id="@+id/no_of_quantity"
+            android:text="0"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginLeft="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_marginLeft="8dp"
+            android:text="+"
+            android:textSize="20sp"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:onClick="increment"/>
+    </LinearLayout>
+
+    <TextView
+        android:text="@string/order_summary"
+        android:textColor="@color/Black"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif"
+        android:layout_margin="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView android:id="@+id/price_text_view"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:layout_margin="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_margin="8dp"
+        android:text="@string/order"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="submitOrder"/>
+</LinearLayout>
+
+</ScrollView>
+
+
